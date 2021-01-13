@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './Statistics.module.css'
+import PropTypes from 'prop-types'
 
-export default function Statistics({ title, stats}) {
+function Statistics({ title, stats}) {
     return (
         <section className={styles.statistics}>
             <h2 className={styles.title}>{title}</h2>
@@ -17,3 +18,18 @@ export default function Statistics({ title, stats}) {
         </section>
     )
 }
+
+
+Statistics.propTypes = {
+    stats: PropTypes.arrayOf(
+        PropTypes.exact(
+            {
+                id: PropTypes.string.isRequired,
+                label: PropTypes.string.isRequired,
+                percentage: PropTypes.number.isRequired,
+            }
+        )
+    )
+}
+
+export default Statistics;

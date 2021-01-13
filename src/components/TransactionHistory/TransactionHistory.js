@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './TransactionHistory.module.css';
+import PropTypes from 'prop-types'
 
-export default function TransactionHistory({items}) {
+function TransactionHistory({items}) {
     return (
         <section>
             <table className={styles.transactionHistory}>
@@ -25,3 +26,18 @@ export default function TransactionHistory({items}) {
         </section>
     )
 }
+
+TransactionHistory.propTypes = {
+    items: PropTypes.arrayOf(
+        PropTypes.exact(
+            {
+                id: PropTypes.string.isRequired,
+                type: PropTypes.string.isRequired,
+                amount: PropTypes.string.isRequired,
+                currency: PropTypes.string.isRequired,
+            }
+        )
+    )
+}
+
+export default TransactionHistory;
