@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './FriendList.module.css';
 
-export default function FriendList({ friends }) {
+function FriendList({ friends }) {
     return (
         <section className={styles.container}>
             <ul className={styles.friendList}>
@@ -17,3 +17,5 @@ export default function FriendList({ friends }) {
         </section>
     )
 }
+
+export default FriendList;

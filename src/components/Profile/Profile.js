@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Profile.module.css';
 
-export default function Profile({ avatar, name, tag, location, stats}) {
+function Profile({ avatar, name, tag, location, stats}) {
     return (
         <div className={styles.profile}>
             <div className={styles.description}>
@@ -32,3 +32,6 @@ export default function Profile({ avatar, name, tag, location, stats}) {
         </div>
   );
 }
+
+
+export default Profile;
