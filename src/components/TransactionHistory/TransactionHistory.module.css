@@ -1,0 +1,31 @@
+.transactionHistory {
+    margin: 10px;
+    outline: 2px solid whitesmoke;
+}
+
+.thead {
+    background-color: royalblue;
+    padding: 20px;
+}
+
+.name {
+    padding: 10px 30px;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+}
+
+.tbody {
+    background-color: whitesmoke;
+    composes: name;
+    color: darkslategray;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.item:nth-child(2n + 2) {
+    background-color: lightgrey;
+}
