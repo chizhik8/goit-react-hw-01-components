@@ -1,6 +1,12 @@
 import React from 'react';
+
 import Profile from './Profile/Profile';
-import userProfile  from '../user.json';
+import Statistics from './Statistics/Statistics';
+import FriendList from './FriendList/FriendList';
+
+import userProfile from '../data/user.json';
+import statisticalData from '../data/statistical-data.json';
+import friends from '../data/friends.json';
 
 
 export default function App () {
@@ -13,6 +19,8 @@ export default function App () {
         location={userProfile.location}
         stats={userProfile.stats}
       />
+      <Statistics title="Upload stats" stats={statisticalData} />
+      <FriendList friends={friends} />
     </>  
   )
 }

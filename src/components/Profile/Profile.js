@@ -1,8 +1,6 @@
 import React from 'react'
 import styles from './Profile.module.css';
 
-console.log(styles);
-
 export default function Profile({ avatar, name, tag, location, stats}) {
     return (
         <div className={styles.profile}>
